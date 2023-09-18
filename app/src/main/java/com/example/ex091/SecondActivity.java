@@ -10,6 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+/**
+ * @author    Ori Roitzaid <or1901 @ bs.amalnet.k12.il>
+ * @version	  1
+ * @since	  18/9/2023
+ * The second activity:
+ * It has a menu of 4 colors - like in the main activity but plus one additional color.
+ * Also there is a button that moves back to the main activity.
+ */
 public class SecondActivity extends AppCompatActivity {
     LinearLayout secondLayout;
 

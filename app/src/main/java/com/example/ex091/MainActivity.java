@@ -11,6 +11,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+/**
+ * @author    Ori Roitzaid <or1901 @ bs.amalnet.k12.il>
+ * @version	  1
+ * @since	  18/9/2023
+ * The main activity:
+ * It has a general menu of 3 colors - choosing each one changes the background color.
+ * Also there is a button that moves to the second activity.
+ */
 public class MainActivity extends AppCompatActivity {
     LinearLayout mainLayout;
     Intent si;
