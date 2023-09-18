@@ -3,7 +3,6 @@ package com.example.ex091;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,20 +10,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
-    LinearLayout mainLayout;
-    Intent si;
+public class SecondActivity extends AppCompatActivity {
+    LinearLayout secondLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
-        mainLayout = (LinearLayout) findViewById(R.id.mainLayout);
+        secondLayout = (LinearLayout) findViewById(R.id.secondLayout);
     }
 
     /**
-     * This function presents the menu to the screen.
+     * This function presents the menu to the screen - also adds the additional fourth color to it.
      * <p>
      *
      * @param menu The options menu in which you place your items.
@@ -34,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
+
+        menu.add(0, 0, 400, "Yellow");
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -51,21 +51,22 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.menuRed)
-            mainLayout.setBackgroundColor(Color.RED);
+            secondLayout.setBackgroundColor(Color.RED);
         else if(id == R.id.menuBlue)
-            mainLayout.setBackgroundColor(Color.BLUE);
+            secondLayout.setBackgroundColor(Color.BLUE);
         else if(id == R.id.menuGreen)
-            mainLayout.setBackgroundColor(Color.GREEN);
+            secondLayout.setBackgroundColor(Color.GREEN);
+        else if(id == 0)
+            secondLayout.setBackgroundColor(Color.YELLOW);
 
         return super.onOptionsItemSelected(item);
     }
 
     /**
-     * This function moves to the next activity.
-     * @param view The button that was clicked in order to move to the next activity.
+     * This function returns back to the main activity.
+     * @param view The button that was clicked in order to go back.
      */
-    public void nextActivity(View view) {
-        si = new Intent(this, SecondActivity.class);
-        startActivity(si);
+    public void goBack(View view) {
+        finish();
     }
 }

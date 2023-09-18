@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainLayout"
+    android:id="@+id/secondLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <Space
         android:layout_width="match_parent"
@@ -25,12 +25,12 @@
             android:layout_weight="7" />
 
         <Button
-            android:id="@+id/nextBtn"
+            android:id="@+id/backBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:onClick="nextActivity"
-            android:text="Next" />
+            android:onClick="goBack"
+            android:text="Back" />
 
         <Space
             android:layout_width="0dp"
@@ -42,5 +42,4 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.3" />
-
 </LinearLayout>
